@@ -20,7 +20,7 @@ type Logger struct {
 }
 
 func init() {
-	logger = loggerInit("SDK")
+	logger = loggerInit("log")
 
 }
 func NewPrivateLog(moduleName string) {
