@@ -1,3 +1,4 @@
+github.com/YuanJey/goutils2 v1.0.2/go.mod h1:yOBYUtUK6mjzIXLfrJVqlM3CfxfJDjWUacyRuSo7tyM=
 github.com/YuanJey/wps-api v1.3.0 h1:hlUpZFUd5k6MzDo6Z3nLkh+VDMf+2bYvZdoBoXtpUcU=
 github.com/YuanJey/wps-api v1.3.0/go.mod h1:fpDSozJzRMG7mjBc0gGNBif5WVAEsShPr5t1m9qSAUs=
 github.com/antonfisher/nested-logrus-formatter v1.3.1 h1:NFJIr+pzwv5QLHTPyKz9UMEoHck02Q9L0FP13b/xSbQ=

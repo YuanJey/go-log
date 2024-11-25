@@ -5,7 +5,7 @@ go 1.22.3
 toolchain go1.22.9
 
 require (
-	github.com/YuanJey/wps-api v1.3.0
+	github.com/YuanJey/goutils2 v1.0.2
 	github.com/antonfisher/nested-logrus-formatter v1.3.1
 	github.com/lestrrat-go/file-rotatelogs v2.4.0+incompatible
 	github.com/olivere/elastic/v7 v7.0.32
