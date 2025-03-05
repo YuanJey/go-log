@@ -11,7 +11,7 @@ require (
 	github.com/olivere/elastic/v7 v7.0.32
 	github.com/rifflock/lfshook v0.0.0-20180920164130-b9218ef580f5
 	github.com/sirupsen/logrus v1.9.3
-	pl.ghgame.cn/gitea/yuanjie/go-config v1.0.0
+	github.com/YuanJey/goconf v1.0.1
 )
 
 require (

@@ -1,6 +1,6 @@
 package log
 
-import config2 "pl.ghgame.cn/gitea/yuanjie/go-config/pkg/config"
+import config2 "github.com/YuanJey/goconf/pkg/config"
 
 var Config config
 
