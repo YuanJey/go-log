@@ -54,7 +54,7 @@ func loggerInit(moduleName string) *Logger {
 		logger.AddHook(newEsHook(moduleName))
 	}
 	//Log file segmentation hook
-	hook := NewLfsHook(time.Duration(Config.Log.RotationTime)*time.Hour, Config.Log.RemainRotationCount, moduleName)
+	hook := NewLfsHook(time.Duration(Config.Log.RotationTime)*time.Hour, uint(Config.Log.RemainRotationCount), moduleName)
 	logger.AddHook(hook)
 	return &Logger{
 		logger,

@@ -1,22 +1,25 @@
 package log
 
-import config2 "github.com/YuanJey/goconf/pkg/config"
+import "github.com/YuanJey/env-config/pkg/load"
 
 var Config config
 
 type config struct {
 	Log struct {
-		StorageLocation       string   `yaml:"storageLocation"`
-		RotationTime          int      `yaml:"rotationTime"`
-		RemainRotationCount   uint     `yaml:"remainRotationCount"`
-		RemainLogLevel        uint     `yaml:"remainLogLevel"`
-		ElasticSearchSwitch   bool     `yaml:"elasticSearchSwitch"`
-		ElasticSearchAddr     []string `yaml:"elasticSearchAddr"`
-		ElasticSearchUser     string   `yaml:"elasticSearchUser"`
-		ElasticSearchPassword string   `yaml:"elasticSearchPassword"`
+		StorageLocation       string   `env:"STORAGE_LOCATION" def:"./logs/"`
+		RotationTime          int      `env:"ROTATION_TIME" def:"24"`
+		RemainRotationCount   int      `env:"REMAIN_ROTATION_COUNT" def:"2"`
+		RemainLogLevel        int      `env:"REMAIN_LOG_LEVEL" def:"6"`
+		ElasticSearchSwitch   bool     `env:"ELASTIC_SEARCH_SWITCH" def:"false"`
+		ElasticSearchAddr     []string `env:"ELASTIC_SEARCH_ADDR" def:"http://127.0.0.1:9200/"`
+		ElasticSearchUser     string   `env:"ELASTIC_SEARCH_USER" def:""`
+		ElasticSearchPassword string   `env:"ELASTIC_SEARCH_PASSWORD" def:""`
 	} `yaml:"log"`
 }
 
 func init() {
-	config2.UnmarshalConfig(&Config, "config.yaml")
+	err := load.LoadEnv(&Config)
+	if err != nil {
+		panic(err)
+	}
 }
